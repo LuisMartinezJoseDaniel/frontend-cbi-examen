@@ -5,8 +5,8 @@ export const BackendAlert = ({ backendErrors }) => {
   return (
     <Box component={"section"} marginY={2}>
       {backendErrors.length > 0 &&
-        backendErrors.map((error) => (
-          <Alert severity="error" key={error}>
+        backendErrors.map((error, index) => (
+          <Alert severity="error" key={index}>
             {error}
           </Alert>
         ))}
